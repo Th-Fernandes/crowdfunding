@@ -207,3 +207,24 @@ section.aboutProject {
     justify-content: space-between;
 }
 
+.packs .available .select .wave span:first-child {
+    font-weight: 700;
+    font-size: 3rem;
+    margin-right: .8rem;
+}
+
+.packs .available.unavailable {
+    opacity: 0.4;
+}
+
+.packs .available.unavailable .select button {
+    background: rgb(88, 88, 88);
+    color: white;
+    cursor: initial;
+}
+/* === RESPONSIVE ========================== */
+@media (max-width: 425) {
+    .header-content {
+        width: 100%;
+    }
+}

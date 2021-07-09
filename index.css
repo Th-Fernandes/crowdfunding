@@ -1,0 +1,209 @@
+/* === GLOBAL =================== */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size :62.5%;
+    font-family: 'Commissioner', sans-serif;
+    /* COLOR STYLES */
+    --Moderate-cyan: hsl(176, 50%, 47%);
+    --Dark-cyan: hsl(176, 72%, 28%);
+    --Dark-gray: hsl(0, 0%, 48%);
+}
+
+body {
+    font-size: 1.6rem;
+    background:#f0f0f0;
+}
+
+button {
+    border-radius: 32px;
+    border: none;
+    
+    width: 20rem;
+    padding: 1.5rem 0;
+
+    font-size: 1.6rem;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+button.cyanButton {
+    background: var(--Moderate-cyan);
+    color: white;
+}
+
+section {
+    background: white;
+    margin-bottom: 3rem;
+    border-radius: 8px;
+}
+/* === HEADER =================== */
+header.mainHeader {
+    background: url('./images/image-hero-desktop.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white;
+}
+
+.header-container {
+    width: min(144rem, 100%);
+    height: 40rem;
+    margin: 0 auto;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    height: 30%;
+    margin: 0 auto;
+}
+
+header nav span{
+    margin-right: 2rem;
+    font-weight: 500;
+}
+/* === MAIN =================== */
+main {
+    width: min(72rem, 90%);
+    margin: -10rem auto 0;
+}
+/* === SECTION PRINCIPAL =================== */
+.mainSection {
+    text-align: center;
+}
+
+.mainSection > img {
+    margin-top: -3rem;
+}
+
+.mainSection h2 {
+    font-size: 3rem;
+    margin-bottom:  1.5rem;
+}
+
+.mainSection > p {
+    color: var(--Dark-gray);
+}
+
+.mainSection .buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    margin-top: 4.5rem;
+    padding-bottom: 4rem;    
+
+}
+
+
+.mainSection .buttons .bookmark {
+    display: flex;
+    align-items: center;
+
+    background: hsl(0, 2%, 91%);
+    border-radius: 32px;
+    width: 15rem;
+}
+
+.mainSection .buttons .bookmark p {
+    margin-left: 1rem;
+}
+/* === DATA SECTION  =================== */
+.statistic {
+    padding-bottom: 3rem;
+}
+
+.datas {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20%;
+}
+
+.datas .data {
+    width: 33%;
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.datas .data p:first-child {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #000;
+}
+
+.datas .data p {
+    color: var(--Dark-gray);
+    font-size: 1.4rem;
+}
+
+.datas .data.amount {
+    border-right: 2px solid rgba(0, 0, 0, 0.116);
+    border-left: 2px solid rgba(0, 0, 0, 0.116);
+}
+
+.progress {
+    width: 90%;
+    margin: 0 auto;
+    background: rgb(211, 211, 211);
+}
+
+.progress .concluded {
+    width: 80%;
+    background: var(--Moderate-cyan);
+    color: var(--Moderate-cyan);
+}
+
+.progress, .concluded {
+    border-radius: 32px;
+}
+/* === PROJECT SECTION  =================== */
+section.aboutProject {
+    padding: 3rem 1.5rem;
+}
+
+.projectDescription  h2 {
+    margin-bottom: 4rem;
+}
+
+.projectDescription > p {
+    color: var(--Dark-gray);
+    margin-bottom: 2rem;
+}
+
+.packs .available {
+    border: 2px solid rgba(184, 184, 184, 0.349);
+    border-radius: 8px;
+    padding: 2rem 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.packs .available header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.packs .available header p {
+    color: var(--Moderate-cyan);
+}
+
+.packs .available > p {
+    margin: 2rem 0;
+    line-height: 2;
+    color: var(--Dark-gray);
+    font-weight: 500;
+}
+
+.packs .available .select {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+

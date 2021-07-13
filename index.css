@@ -12,6 +12,7 @@ html {
     --Moderate-cyan: hsl(176, 50%, 47%);
     --Dark-cyan: hsl(176, 72%, 28%);
     --Dark-gray: hsl(0, 0%, 48%);
+    --Gray-border: 2px solid rgba(0, 0, 0, 0.116);
 }
 
 body {
@@ -63,6 +64,10 @@ header.mainHeader {
     width: 75%;
     height: 30%;
     margin: 0 auto;
+}
+
+nav.mobileNav {
+    display: none;
 }
 
 header nav span{
@@ -144,8 +149,8 @@ main {
 }
 
 .datas .data.amount {
-    border-right: 2px solid rgba(0, 0, 0, 0.116);
-    border-left: 2px solid rgba(0, 0, 0, 0.116);
+    border-right: var(--gray-border);
+    border-left: var(--gray-border);
 }
 
 .progress {
@@ -175,6 +180,8 @@ section.aboutProject {
 .projectDescription > p {
     color: var(--Dark-gray);
     margin-bottom: 2rem;
+    font-weight: 500;
+    line-height: 2;
 }
 
 .packs .available {
@@ -223,8 +230,46 @@ section.aboutProject {
     cursor: initial;
 }
 /* === RESPONSIVE ========================== */
-@media (max-width: 425) {
-    .header-content {
+@media (max-width: 425px) {
+   
+    /* === header === */
+    header.mainHeader {
+        background: url('./images/image-hero-mobile.jpg');
+    }
+   
+    nav.desktopNav {
+        display: none;
+    }
+
+    nav.mobileNav {
+        display: block;
+    }
+    /* === SECTION PRINCIPAL === */
+    .mainSection .buttons .bookmark {
+        background: #FFF;
+        border-radius: 0;
+        width: auto;
+    }
+
+    .mainSection .buttons .bookmark p {
+        display: none;
+    }
+    /* DATA SECTION === */
+    .datas {
+        margin-right: 0;
+        flex-wrap: wrap;
+    }
+    
+    .datas .data {
         width: 100%;
+    }
+
+    /* PROJECT SECTION === */
+    .packs .available .select {
+        display: block;
+    }
+
+    .packs .available .select .wave {
+        margin-bottom: 2.5rem;
     }
 }

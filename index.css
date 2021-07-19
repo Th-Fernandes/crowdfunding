@@ -231,6 +231,7 @@ section.aboutProject {
 }
 
 /* === MODAL - BACK THIS PROJECT ============ */
+/*== GENERAL MODAL ==*/
 .modal-overlay {
     position: fixed;
     z-index: 9999;
@@ -254,9 +255,10 @@ section.aboutProject {
 }
 
 .modal-overlay .modal {
-    margin: min(20rem, 20%) auto 0;
+    margin: min(20rem, 10%) auto 0;
     padding: 3rem ;
 
+    max-height: min(80rem, 90%);
     width: min(90rem,90%);
     background: #f0f0f0;
     border-radius: 8px;
@@ -273,7 +275,7 @@ section.aboutProject {
     margin: 3rem 0;
     color: var(--Dark-gray);
 }
-
+/*== MODAL: PACK GROUPS ==*/
 .modal-overlay .modal .packs .available {
     display: flex;
     align-items: center;
@@ -288,7 +290,7 @@ section.aboutProject {
 .modal-overlay .modal .packs .available .pack-description > p {
     line-height: 2;
 }
-
+/*== modal: AVAILABLE PACK EXAMPLE ==*/
 .modal-overlay .modal .packs .available .pack-description .header-pack-description {
     display: flex;
     align-items: center;
@@ -300,11 +302,57 @@ section.aboutProject {
     align-items: center;
 }
 
+.modal-overlay .modal .packs .available .pack-description .header-pack-description .price > p {
+    color: var(--Moderate-cyan);
+    font-weight: 500;
+}
+
 .modal-overlay .modal .packs .available .pack-description .header-pack-description .price > h3 {
     margin-right: 3rem;
 }
+/*== MODAL: PAYMENT AREA ==*/
+.pledge {
+    border-top: 2px solid rgb(204, 204, 204);
+}
+
+.pledge,
+.pledge .payment-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pledge {
+    display: none;
+}
+
+.pledge > p,
+.pledge .payment-buttons {
+    margin-top: 3rem;
+}
+
+.pledge .payment-buttons > input {
+    border-radius: 32px;
+    border: 2px solid rgb(204, 204, 204);
+    
+    width: 10rem;
+    padding: 1.5rem 0;
+
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.pledge .payment-buttons > input:focus {
+    border: 1px solid black;
+    outline: none;
+}
+.pledge .payment-buttons > button {
+    width: 15rem;
+    margin-left: 1.5rem;
+}
 /* === RESPONSIVE ========================== */
-@media (max-width: 425px) {
+@media (max-width: 800px) {
    
     /* === header === */
     header.mainHeader {
@@ -345,5 +393,21 @@ section.aboutProject {
 
     .packs .available .select .wave {
         margin-bottom: 2.5rem;
+    }
+    /* MODAL - BACK THIS PROJECT === */
+    .modal-overlay .modal{
+        overflow-y: scroll;
+    }
+
+    .modal-overlay .modal .packs .available > #pack-option {
+        width: 30%;
+      }
+
+    .modal-overlay .modal .packs .available .pack-description .header-pack-description .price {
+        display: inline-block;
+    }
+
+    .modal .packs .available .pack-description .header-pack-description .price > h3 {
+        margin-bottom: 1.2rem;
     }
 }

@@ -33,7 +33,8 @@ button {
     cursor: pointer;
 }
 
-button.cyanButton {
+button.cyanButton,
+input.cyanButton {
     background: var(--Moderate-cyan);
     color: white;
 }
@@ -278,13 +279,17 @@ section.aboutProject {
 /*== MODAL: PACK GROUPS ==*/
 .modal-overlay .modal .packs .available {
     display: flex;
-    align-items: center;
 }
 
-.modal-overlay .modal .packs .available > #pack-option {
-  width: 10%;
-  align-self: flex-start;
+.modal-overlay .modal .packs .available .select-pack  {
+  width: 10rem;
+  height: 100%;
   margin-top: .5rem;
+}
+
+.modal-overlay .modal .packs .available .select-pack > input {
+    height: 2rem;
+    width: 80%;
 }
 
 .modal-overlay .modal .packs .available .pack-description > p {
@@ -331,7 +336,8 @@ section.aboutProject {
     margin-top: 3rem;
 }
 
-.pledge .payment-buttons > input {
+.pledge .payment-buttons > input,
+.pledge .payment-buttons .money-value > input  {
     border-radius: 32px;
     border: 2px solid rgb(204, 204, 204);
     
@@ -343,13 +349,31 @@ section.aboutProject {
     text-align: center;
 }
 
+.pledge .payment-buttons .money-value {
+    display: flex;
+    align-items: center;
+}
+
+.pledge .payment-buttons .money-value > p {
+    color: var(--Dark-gray);
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 0 -3rem 0 2rem;
+    z-index: 1;
+}
+
 .pledge .payment-buttons > input:focus {
     border: 1px solid black;
     outline: none;
 }
-.pledge .payment-buttons > button {
+.pledge .payment-buttons > button{
     width: 15rem;
     margin-left: 1.5rem;
+}
+
+.pledge .payment-buttons .cyanButton {
+    width: 14rem;
+    margin-left: 2rem;
 }
 /* === RESPONSIVE ========================== */
 @media (max-width: 800px) {

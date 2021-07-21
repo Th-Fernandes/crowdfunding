@@ -176,118 +176,120 @@
 
       <!--MODAL: BACK THIS PROJECT BUTTON-->
       <section class="modal-overlay">
-        <div class="modal">
+        <form class="modal">
           <button>
-            <img src="./images/icon-close-modal.svg" onclick="modalOpen.close()" alt="close pack options" />
+            <img
+              src="./images/icon-close-modal.svg"
+              onclick="modalOpen.close()"
+              alt="close pack options"
+            />
           </button>
+      
           <header>
             <h2>Back this project</h2>
             <p>
-              Want to support us in bringing Mastercraft Bamboo Monitor Riser
-              out in the world?
+              Want to support us in bringing Mastercraft Bamboo Monitor Riser out in
+              the world?
             </p>
           </header>
-
+      
           <div class="packs">
             <div class="available">
-              <input id="pack-option" type="checkbox" />
-
+      
+              <div class="select-pack">
+                <label for="noReward-option"></label>
+                <input
+                  type="radio"
+                  id="noReward-option"
+                  name="selecionedPack"
+                  onclick="payYourPrice.open()"
+                />
+              </div>
+      
               <div class="pack-description">
                 <h3>Pledge with no reward</h3>
                 <p>
-                  Choose to support us without a reward if you simply believe in
-                  our project. As a backer, you will be signed up to receive
-                  product updates via email.
+                  Choose to support us without a reward if you simply believe in our
+                  project. As a backer, you will be signed up to receive product
+                  updates via email.
                 </p>
               </div>
             </div>
-
+      
             <div class="available">
-              <input id="pack-option" type="checkbox" />
-
+              <div class="select-pack">
+                <label for="bamboo-option"></label>
+                <input
+                  type="radio"
+                  id="bamboo-option"
+                  name="selecionedPack"
+                  onclick="payYourPrice.open()"
+                />
+              </div>
+      
               <div class="pack-description">
                 <div class="header-pack-description">
                   <div class="price">
                     <h3>Bamboo stand</h3>
-                    <p> Pledge $25 or more</p>
+                    <p>Pledge $25 or more</p>
                   </div>
-
+      
                   <p>101 left</p>
                 </div>
-
-                <p>You get an ergonomic stand made of natural bamboo. You've helped us launch
-                  our promotional campaign, and you’ll be added to a special Backer member
-                  list. 101 left</p>
-              </div> 
+      
+                <p>
+                  You get an ergonomic stand made of natural bamboo. You've helped us
+                  launch our promotional campaign, and you’ll be added to a special
+                  Backer member list. 101 left
+                </p>
+              </div>
             </div>
-
+      
             <div class="available">
-              <input onclick="payYourPrice.open()" id="pack-option" type="checkbox" />
-
+              <div class="select-pack">
+                <label for="black-option"></label>
+                <input
+                  type="radio"
+                  id="black-option"
+                  name="selecionedPack"
+                  onclick="payYourPrice.open()"
+                />
+              </div>
+      
               <div class="pack-description">
                 <div class="header-pack-description">
                   <div class="price">
                     <h3>Black Edition Stand</h3>
-                    <p> Pledge $75 or more</p>
+                    <p>Pledge $75 or more</p>
                   </div>
-                  <p>64 left </p>
+                  <p>64 left</p>
                 </div>
-
+      
                 <p>
-                  You get a Black Special Edition computer stand and a personal thank you. 
-                  You’ll be added to our Backer member list. Shipping is included.
+                  You get a Black Special Edition computer stand and a personal thank
+                  you. You’ll be added to our Backer member list. Shipping is
+                  included.
                 </p>
-
+      
                 <div class="pledge">
                   <p>Enter your pledge</p>
-
+      
                   <div class="payment-buttons">
-                    <input type="number">
-                    <button class="cyanButton">Continue</button>
+                    <div class="money-value">
+                      <p>$</p>
+                      <input type="number" />
+                    </div>
+                    
+                    <input type="submit" value="continue" class="cyanButton" />
                   </div>
                 </div>
-              </div> 
+              </div>
             </div>
           </div>
-        </div>
+        </form>
       </section>
     </main>
 
     <script src="./index.js"></script>
-
-    <!-- 
-      TODO:
-      • DEIXAR O MODAL DO BACK THIS PROJECT RESPONSIVO BOTANDO UMA BARRA DE ROLAGEM 
-      • FAZER O BOTAO DO BACK THIS PROJECT FUNCIONAR O CANCELAMENTO 
-
-    -->
-
-    <!-- Selected pledge start -->
-    Enter your pledge $25 Continue
-    <!-- Selected pledge end -->
-
-     
-
-    <!-- Selected pledge start -->
-    Enter your pledge $75 Continue
-    <!-- Selected pledge end -->
-
-    Mahogany Special Edition Pledge $200 or more You get two Special Edition
-    Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
-    to our Backer member list. Shipping is included. 0 left
-
-    <!-- Selected pledge  start -->
-    Enter your pledge $200 Continue
-    <!-- Selected pledge end -->
-
-    <!-- Selection modal end -->
-
-    <!-- Success modal start -->
-
-    Thanks for your support! Your pledge brings us one step closer to sharing
-    Mastercraft Bamboo Monitor Riser worldwide. You will get an email once our
-    campaign is completed. Got it!
-
-    <!-- Success modal end -->
   </body>
 </html>

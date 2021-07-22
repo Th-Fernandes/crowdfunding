@@ -176,7 +176,7 @@
 
       <!--MODAL: BACK THIS PROJECT BUTTON-->
       <section class="modal-overlay">
-        <form class="modal">
+        <form class="modal" onsubmit="return verifyAmount();" >
           <button>
             <img
               src="./images/icon-close-modal.svg"
@@ -240,8 +240,23 @@
                 <p>
                   You get an ergonomic stand made of natural bamboo. You've helped us
                   launch our promotional campaign, and you’ll be added to a special
-                  Backer member list. 101 left
+                  Backer member list. 
                 </p>
+
+                <p id="mobile-left">101 left</p> <!--ESSE P DEVE APENAS APARECER NA VERSÃO MOBILE, SEGUINDO O DESIGN-->
+
+                <div class="pledge">
+                  <p>Enter your pledge</p>
+      
+                  <div class="payment-buttons">
+                    <div class="money-value">
+                      <p>$</p>
+                      <input type="number" id="price" value="25" required />
+                    </div>
+                    
+                    <input type="submit" value="continue" class="cyanButton" />
+                  </div>
+                </div>
               </div>
             </div>
       
@@ -270,6 +285,8 @@
                   you. You’ll be added to our Backer member list. Shipping is
                   included.
                 </p>
+
+                <p id="mobile-left">64 left</p> <!--ESSE P DEVE APENAS APARECER NA VERSÃO MOBILE, SEGUINDO O DESIGN-->
       
                 <div class="pledge">
                   <p>Enter your pledge</p>

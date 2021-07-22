@@ -257,7 +257,7 @@ section.aboutProject {
 
 .modal-overlay .modal {
     margin: min(20rem, 10%) auto 0;
-    padding: 3rem ;
+    padding: 1rem ;
 
     max-height: min(80rem, 90%);
     width: min(90rem,90%);
@@ -295,6 +295,10 @@ section.aboutProject {
 .modal-overlay .modal .packs .available .pack-description > p {
     line-height: 2;
 }
+
+.pack-description #mobile-left {
+    display: none; /* ESSE CSS É PARA ESCONDER UM P QUE SÓ DEVE APARECER NAS VERSÕES DE CELULAR E TABLETS*/
+}
 /*== modal: AVAILABLE PACK EXAMPLE ==*/
 .modal-overlay .modal .packs .available .pack-description .header-pack-description {
     display: flex;
@@ -329,6 +333,10 @@ section.aboutProject {
 
 .pledge {
     display: none;
+}
+
+.pledge > p {
+    color: var(--Dark-gray);
 }
 
 .pledge > p,
@@ -434,4 +442,26 @@ section.aboutProject {
     .modal .packs .available .pack-description .header-pack-description .price > h3 {
         margin-bottom: 1.2rem;
     }
+    /* MODAL: PAYMENT AREA ===*/
+    .pack-description #mobile-left {
+        display: block;
+        font-weight: 700;
+        font-size: 2rem;
+    }
+
+    .header-pack-description > p {
+        display: none;
+    }
+
+    .pledge {
+        flex-wrap: wrap;
+    }
+
+    .pledge > p,
+    .pledge .payment-buttons{
+        width: 100%;
+        text-align: center;
+    }
+
+    
 }

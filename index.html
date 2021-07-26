@@ -177,7 +177,7 @@
       <!--MODAL: BACK THIS PROJECT BUTTON-->
       <section class="modal-overlay">
         <form class="modal" onsubmit="return verifyAmount();" >
-          <button>
+          <button id="close-modal">
             <img
               src="./images/icon-close-modal.svg"
               onclick="modalOpen.close()"
@@ -254,7 +254,7 @@
                       <input type="number" id="price" value="25" required />
                     </div>
                     
-                    <input type="submit" value="continue" class="cyanButton" />
+                    <input type="submit" id="finishedBuy" value="continue" class="cyanButton" />
                   </div>
                 </div>
               </div>
@@ -304,6 +304,22 @@
             </div>
           </div>
         </form>
+      </section>
+
+      <!--MODAL: ORDER CONCLUDED-->
+
+      <section class="modal-overlay" id="finishedBuy-modal">
+        <div class="modal" id="checked-modal">
+          <img src="./images/icon-check.svg" alt="order concluded" />
+
+          <article>
+            <h2>Thanks for your support</h2>
+
+            <p>your plede brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get an email once our campaign is completed.</p>
+          </article>
+
+          <button class="cyanButton" onclick="conclusion()">Got it</button>
+        </div>
       </section>
     </main>
 

@@ -265,7 +265,7 @@ section.aboutProject {
     border-radius: 8px;
 }
 
-.modal-overlay .modal > button {
+.modal-overlay .modal > button#close-modal {
     display: flex;
     justify-content: flex-end;
     padding: 0;
@@ -383,8 +383,29 @@ section.aboutProject {
     width: 14rem;
     margin-left: 2rem;
 }
+
+/* === MODAL: PAYMENT COMPLITED ===*/
+.modal-overlay .modal#checked-modal {
+    text-align: center;
+    padding: 3rem;
+    width: min(50rem,90%);
+}
+
+.modal-overlay .modal#checked-modal img,
+.modal-overlay .modal#checked-modal article > h2 {
+    margin-bottom: 2rem;
+}
+
+.modal-overlay .modal#checked-modal article > p {
+    line-height: 2;
+}
+
+.modal-overlay .modal#checked-modal > button {
+    width: 15rem;
+    margin: 1rem 0;
+}
 /* === RESPONSIVE ========================== */
-@media (max-width: 800px) {
+@media (max-width: 600px) {
    
     /* === header === */
     header.mainHeader {

@@ -1,54 +1,7 @@
-/* === GLOBAL =================== */
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-html {
-    font-size :62.5%;
-    font-family: 'Commissioner', sans-serif;
-    /* COLOR STYLES */
-    --Moderate-cyan: hsl(176, 50%, 47%);
-    --Dark-cyan: hsl(176, 72%, 28%);
-    --Dark-gray: hsl(0, 0%, 48%);
-    --Gray-border: 2px solid rgba(0, 0, 0, 0.116);
-}
-
-body {
-    font-size: 1.6rem;
-    background:#f0f0f0;
-}
-
-button {
-    border-radius: 32px;
-    border: none;
-    
-    width: 20rem;
-    padding: 1.5rem 0;
-
-    font-size: 1.6rem;
-    font-weight: 700;
-
-    cursor: pointer;
-}
-
-button.cyanButton,
-input.cyanButton {
-    background: var(--Moderate-cyan);
-    color: white;
-}
-
-section {
-    background: white;
-    margin-bottom: 3rem;
-    border-radius: 8px;
-}
 /* === HEADER =================== */
 header.mainHeader {
-    background: url('./images/image-hero-desktop.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
+    background: url('../images/image-hero-desktop.jpg') no-repeat center;
+    background-size: cover;
     color: white;
 }
 
@@ -71,9 +24,10 @@ nav.mobileNav {
     display: none;
 }
 
-header nav span{
+header .header-container nav span a{
     margin-right: 2rem;
     font-weight: 500;
+    color: white
 }
 /* === MAIN =================== */
 main {
@@ -265,7 +219,7 @@ section.aboutProject {
     border-radius: 8px;
 }
 
-.modal-overlay .modal > button#close-modal {
+.modal-overlay .modal > button#closeModal {
     display: flex;
     justify-content: flex-end;
     padding: 0;

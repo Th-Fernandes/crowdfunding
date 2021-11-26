@@ -8,7 +8,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"
     />
     <!--CSS-->
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/index.css" />
     <!--FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,9 +28,9 @@
           <h1>Crowdfund</h1>
 
           <nav class="desktopNav">
-            <span>About</span>
-            <span>Discover</span>
-            <span>Get Started</span>
+            <span><a href="#">About</a></span>
+            <span><a href="#">Discover</a></span>
+            <span><a href="#">Get Started</a></span>
           </nav>
 
           <nav class="mobileNav">
@@ -48,7 +49,7 @@
         </p>
 
         <div class="buttons">
-          <button class="cyanButton" onclick="modalOpen.open()">Back this project</button>
+          <button class="cyanButton">Back this project</button>
 
           <div class="bookmark">
             <img src="./images/icon-bookmark.svg" alt="" />
@@ -172,12 +173,9 @@
 
       <!--MODAL: BACK THIS PROJECT BUTTON-->
       <section class="modal-overlay">
-        <form class="modal" onsubmit="return verifyAmount();" >
-          <button id="close-modal">
-            <img
-              src="./images/icon-close-modal.svg"
-              onclick="modalOpen.close()"
-              alt="close pack options"
+        <form class="modal" >
+          <button id="closeModal">
+            <img src="./images/icon-close-modal.svg" alt="close pack options"
             />
           </button>
       
@@ -219,7 +217,6 @@
                   type="radio"
                   id="bamboo-option"
                   name="selecionedPack"
-                  onclick="payYourPrice.open()"
                 />
               </div>
       
@@ -314,11 +311,11 @@
             <p>your plede brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get an email once our campaign is completed.</p>
           </article>
 
-          <button class="cyanButton" onclick="conclusion()">Got it</button>
+          <button class="cyanButton" >Got it</button>
         </div>
       </section>
     </main>
 
-    <script src="./index.js"></script>
+    <script src="./main.js" type="module"></script>
   </body>
 </html>

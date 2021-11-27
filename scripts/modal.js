@@ -14,15 +14,15 @@ const modal = {
   },
   // mostra as opções de pagamento ao selecionar um pacote pra comprar
   showPrice() {
-    const button = document.querySelector('#bamboo-option')
-    button.addEventListener('click', () => {
-      const moreOptions = document.querySelector('.pledge')
-      moreOptions.style.display = "none"
+    const pledgeOptions = document.querySelectorAll('.pledge-option')
 
-      if(moreOptions.style.display == "none") {
-        moreOptions.style.display = "flex"
-      } 
-    })
+    for(let radio of pledgeOptions) {
+      radio.addEventListener('click', (event) => {
+        event.target.parentElement.parentElement.children[1].children[3].style.display = "flex"
+      })
+    }
+    
+
   },
   //verifica se o valor selecionado é suficiente para comprar o pacote
   priceValidation() {

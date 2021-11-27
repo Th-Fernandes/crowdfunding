@@ -189,24 +189,41 @@
       
           <div class="packs">
             <div class="available">
-      
               <div class="select-pack">
                 <label for="noReward-option"></label>
                 <input
                   type="radio"
                   id="noReward-option"
                   name="selecionedPack"
-                  onclick="payYourPrice.open()"
+                  class="pledge-option"
                 />
               </div>
       
               <div class="pack-description">
-                <h3>Pledge with no reward</h3>
+                <div class="header-pack-description">
+                  <h3>Pledge with no reward</h3>
+                </div>
+
                 <p>
                   Choose to support us without a reward if you simply believe in our
                   project. As a backer, you will be signed up to receive product
                   updates via email.
                 </p>
+
+                <p id="mobile-left">a</p>
+
+                <div class="pledge">
+                  <p>Enter your pledge</p>
+      
+                  <div class="payment-buttons">
+                    <div class="money-value">
+                      <p>$</p>
+                      <input type="number" id="price" value="25" required="">
+                    </div>
+                    
+                    <input type="submit" id="finishedBuy" value="continue" class="cyanButton">
+                  </div>
+                </div>
               </div>
             </div>
       
@@ -217,6 +234,7 @@
                   type="radio"
                   id="bamboo-option"
                   name="selecionedPack"
+                  class="pledge-option"
                 />
               </div>
       
@@ -260,7 +278,7 @@
                   type="radio"
                   id="black-option"
                   name="selecionedPack"
-                  onclick="payYourPrice.open()"
+                  class="pledge-option"
                 />
               </div>
       

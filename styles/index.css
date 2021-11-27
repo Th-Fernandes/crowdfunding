@@ -1,3 +1,8 @@
+
+@keyframes up {
+    from {top: 250px; left: 50px;}
+    to {top: 0px; left: 0;}
+}
 /* === HEADER =================== */
 header.mainHeader {
     background: url('../images/image-hero-desktop.jpg') no-repeat center;
@@ -37,6 +42,8 @@ main {
 /* === SECTION PRINCIPAL =================== */
 .mainSection {
     text-align: center;
+    position: relative;
+    animation: up 1s ;
 }
 
 .mainSection > img {
@@ -78,6 +85,8 @@ main {
 /* === DATA SECTION  =================== */
 .statistic {
     padding-bottom: 3rem;
+    position: relative;
+    animation: up 1.25s ;
 }
 
 .datas {
@@ -126,6 +135,8 @@ main {
 /* === PROJECT SECTION  =================== */
 section.aboutProject {
     padding: 3rem 1.5rem;
+    position: relative;
+    animation: up 1.5s ;
 }
 
 .projectDescription  h2 {
@@ -278,16 +289,23 @@ section.aboutProject {
     border-top: 2px solid rgb(204, 204, 204);
 }
 
-.pledge,
+.pledge {
+    display: none;
+}
+
+.pledge.active {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
 .pledge .payment-buttons {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.pledge {
-    display: none;
-}
+
 
 .pledge > p {
     color: var(--Dark-gray);
@@ -437,6 +455,4 @@ section.aboutProject {
         width: 100%;
         text-align: center;
     }
-
-    
 }

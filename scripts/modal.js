@@ -1,16 +1,18 @@
 const modal = {
   //altera o estado da modal de compra entre ativado e não ativado
   toggle() {
-      const buyButton = document.querySelector('.cyanButton')
+      const buyButton = document.querySelectorAll('.cyanButton')
       const closeModalButton = document.querySelector('#closeModal')
 
-      buyButton.addEventListener('click', () => {
+      for(let functionality of buyButton) {
+        functionality.addEventListener('click', () => {
           const buyModal = document.querySelector('.modal-overlay').classList.toggle('active')
       })
-
+  
       closeModalButton.addEventListener('click', () => {
           const buyModal = document.querySelector('.modal-overlay').classList.toggle('active')
       })
+      }
   },
   // mostra as opções de pagamento ao selecionar um pacote pra comprar
   showPrice() {

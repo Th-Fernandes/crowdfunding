@@ -20,14 +20,23 @@ const modal = {
     for(let radio of pledgeOptions) {
       radio.addEventListener('click', (event) => {
         const buyOptions = event.target.parentElement.parentElement.children[1].children[3]
+
+        function hideWrongBuyOption(elementOption) {
+          elementOption = document.querySelector(`${elementOption}`)
+
+          if( elementOption.checked != true ) {
+            const buyOptions = elementOption.parentElement.parentElement.children[1].children[3]
+            buyOptions.classList.remove('active')
+          }
+        }
         
         if(event.target.checked) {
           buyOptions.classList.add('active')
-          console.log('aa2')
-        } else {
-          buyOptions.classList.remove('active')
-          console.log('aa')
         }
+
+        hideWrongBuyOption('#noReward-option')
+        hideWrongBuyOption('#bamboo-option')
+        hideWrongBuyOption('#black-option')
       })
     }
     
@@ -36,6 +45,9 @@ const modal = {
   //verifica se o valor selecionado é suficiente para comprar o pacote
   priceValidation() {
     function validateBuy(button, minPrice) {
+      //previne a atualização da página ao clicar no botão de fechar o modal
+      const closeModal = document.querySelector("#closeModal").addEventListener('click',(event) => event.preventDefault())
+
       button.addEventListener('click', (event) => {
         event.preventDefault()
         //acessa o input com o valor a ser pago

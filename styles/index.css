@@ -1,19 +1,26 @@
 
 @keyframes up {
-    from {top: 250px; left: 50px;}
-    to {top: 0px; left: 0;}
+    from {top: 250px; }
+    to {top: 0px; }
+}
+
+@keyframes fade {
+    from {opacity: 0; filter: blur(5px);}
+    to {opacity: 1; filter: blur(0px); }
 }
 /* === HEADER =================== */
 header.mainHeader {
     background: url('../images/image-hero-desktop.jpg') no-repeat center;
     background-size: cover;
     color: white;
+    animation: 1.2s fade ;
 }
 
 .header-container {
     width: min(144rem, 100%);
     height: 40rem;
     margin: 0 auto;
+    
 }
 
 .header-content {
@@ -44,6 +51,8 @@ main {
     text-align: center;
     position: relative;
     animation: up 1s ;
+    box-shadow: 0 0 20px var(--soft-shadow);
+    
 }
 
 .mainSection > img {
@@ -87,6 +96,7 @@ main {
     padding-bottom: 3rem;
     position: relative;
     animation: up 1.25s ;
+    box-shadow: 0 0 20px var(--soft-shadow);
 }
 
 .datas {
@@ -137,6 +147,7 @@ section.aboutProject {
     padding: 3rem 1.5rem;
     position: relative;
     animation: up 1.5s ;
+    box-shadow: 0 0 20px var(--soft-shadow);
 }
 
 .projectDescription  h2 {
@@ -213,6 +224,8 @@ section.aboutProject {
     visibility: hidden;
 
     z-index: 999;
+
+    transition: 0.5s all;
 }
 
 .modal-overlay.active {

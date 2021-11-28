@@ -13,6 +13,7 @@ html {
   --Dark-cyan: hsl(176, 72%, 28%);
   --Dark-gray: hsl(0, 0%, 48%);
   --Gray-border: 2px solid rgba(0, 0, 0, 0.116);
+  --soft-shadow: #2121212c;
 }
 
 body {
@@ -43,8 +44,13 @@ button {
 
 button.cyanButton,
 input.cyanButton {
+  transition: .3s all;
   background: var(--Moderate-cyan);
   color: white;
+}
+
+button.cyanButton:hover {
+  filter: brightness(1.05);
 }
 
 /* global links settings*/
@@ -52,4 +58,11 @@ input.cyanButton {
 a {
   text-decoration: none;
 }
+
+/* global radio settings */
+
+input[type="radio"] {
+  cursor: pointer;
+}
+
 

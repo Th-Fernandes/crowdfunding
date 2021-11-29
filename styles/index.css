@@ -309,7 +309,8 @@ section.aboutProject {
 .pledge.active {
     display: flex;
     justify-content: space-between;
-    align-items: center
+    align-items: center;
+    animation: .3s fade ;
 }
 
 .pledge .payment-buttons {

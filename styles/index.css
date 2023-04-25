@@ -395,7 +395,7 @@ section.aboutProject {
    
     /* === header === */
     header.mainHeader {
-        background: url('./images/image-hero-mobile.jpg');
+        background: url('../images/image-hero-mobile.jpg');
     }
    
     nav.desktopNav {
